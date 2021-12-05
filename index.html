@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <script src="app.js"></script>
     <title>multimedia v1</title>
 </head>
 <body>
@@ -11,7 +12,18 @@
     <h2>proiect Multimedia - 2. Vizualizare date</h2>
     <p>-------------------------------------------------------------------------------------------------------</p>
     <p><span id="info"></span></p>
+    <div id="svgBarChart" style="height:500px"></div>
+    
+    <script>
+        const data = [
+            ['Label 1', 1],
+            ['Label 2', 2],
+            ['Label 3', 3],
+        ];
 
-    <script src="app.js"></script>
+        const barChart = new BarChart(document.getElementById("svgBarChart"));
+        barChart.draw(data);
+    </script>
+    
 </body>
 </html>
