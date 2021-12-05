@@ -12,18 +12,47 @@
     <h2>proiect Multimedia - 2. Vizualizare date</h2>
     <p>-------------------------------------------------------------------------------------------------------</p>
     <p><span id="info"></span></p>
+    <label for="countries">Choose a country to display data:</label> 
+    <select name="countries" id="countries"> </select>
+    <br><br>
+
+    <label for="indicator" id="indicatorLabel">Indicator:</label> <br>
+    <input type="radio" id="sv" name="indicator" value="SV">
+    <label for="sv">SV</label><br>
+    <input type="radio" id="pop" name="indicator" value="POP">
+    <label for="pop">POP</label><br>
+    <input type="radio" id="pib" name="indicator" value="PIB">
+    <label for="pib">PIB</label>
+    <br><br>
+
     <div id="svgBarChart" style="height:500px"></div>
     
     <script>
         const data = [
-            ['Label 1', 1],
-            ['Label 2', 2],
-            ['Label 3', 3],
+            ['2000', 77.7],
+            ['2001', 78.2],
+            ['2002', 78.2],
+            ['2003', 78.1],
+            ['2004', 78.7],
+            ['2005', 78.9],
+            ['2006', 79.4],
+            ['2007', 79.6],
+            ['2008', 79.9],
+            ['2009', 79.8],
+            ['2010', 80.1],
+            ['2011', 80.4],
+            ['2012', 80.3],
+            ['2013', 80.5],
+            ['2014', 80.9],
+            ['2015', 80.6],
+            ['2016', 81],
+            ['2017', 81],
+            ['2018', 81],
         ];
 
         const barChart = new BarChart(document.getElementById("svgBarChart"));
         barChart.draw(data);
     </script>
-    
+    <script src="countriesList.js"></script>
 </body>
 </html>

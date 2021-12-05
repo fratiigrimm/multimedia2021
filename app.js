@@ -31,12 +31,7 @@ class BarChart {
     }
     #createSVG() {
         this.#svg = document.createElementNS(this.#svgns, "svg");
-
-        this.#svg.style.borderColor = 'black';
-        this.#svg.style.borderWidth = '1px';
-        this.#svg.style.borderStyle = 'solid';
-        //or
-        //this.#svg.setAttribute('style', 'border: 1px solid black'); 
+        this.#svg.setAttribute('style', 'border: 1px solid black'); 
 
         this.#svg.setAttribute('width', this.#width); //note: this.#svg.width is readonly
         this.#svg.setAttribute('height', this.#height);
@@ -49,7 +44,6 @@ class BarChart {
         rect.setAttribute('width', this.#width);
 
         rect.style.fill = 'WhiteSmoke';
-        //rect.setAttribute("fill", 'WhiteSmoke'); //! not recommended
 
         this.#svg.appendChild(rect);
     }
@@ -74,7 +68,7 @@ class BarChart {
             bar.setAttribute('x', barX);
             bar.setAttribute('y', barY);
             bar.setAttribute('height', barHeight);
-            bar.setAttribute('width', barWidth / 2);
+            bar.setAttribute('width', barWidth / 1.2);
 
             //note: if the styles are set using CSS .bar:hover {...} will only work if marked as !important
             //the styling should be moved to the .bar {...} instead
