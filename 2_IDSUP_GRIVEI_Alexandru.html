@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
-    <script src="app.js"></script>
+
     <title>multimedia v1</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
     <br><br>
 
     <div id="svgBarChart" style="height:500px"></div>
-    
+    <script src="2_IDSUP_GRIVEI_Alexandru.js"></script>
     <script>
         
         getDataFromLocalFile('media/data.json', 'RO', 'SV');
@@ -55,6 +55,5 @@
         const barChart = new BarChart(document.getElementById("svgBarChart"));
         barChart.draw(data);
     </script>
-    <script src="countriesList.js"></script>
 </body>
 </html>
