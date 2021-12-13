@@ -44,7 +44,7 @@ class BarChart {
         rect.setAttribute('width', this.#width);
 
         rect.style.fill = 'WhiteSmoke';
-
+            
         this.#svg.appendChild(rect);
     }
     #drawBars() {
@@ -98,9 +98,30 @@ async function getData(url) {
     el.innerHTML = data["id"].length;
 
 }
-
+const dataChart = [];
 // getData(urls[1]);
-  
+localURL = 'media/data.json';
+async function getDataFromLocalFile(localURL, tara, indicator) {
+    const response = await fetch(localURL);
+    const data = await response.json();
+
+    //console.log(data);
+    //console.log(data.length);
+    for (var i = 0; i < data.length; i++) {
+        if (data[i].tara === tara && data[i].indicator === indicator) {
+            dataChart.push([data[i].an, data[i].valoare]);
+        }
+    }
+    console.log(dataChart);
+}
+
+const prom = fetch('media/data.json').then(r => r.json());
+const data1 = [];
+prom.then(d => data1.push(...d));
+
+
+
+
 
 
 
